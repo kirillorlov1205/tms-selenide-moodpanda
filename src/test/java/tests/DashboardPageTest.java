@@ -28,6 +28,6 @@ public class DashboardPageTest extends BaseTest {
                 .clickEditPostLink()
                 .setupRating(POST_POSITION, RATING)
                 .clickUpdateButton(POST_POSITION);
-        Assert.assertTrue(dashboardPageService.isSuccessMessageDisplayed());
+        Assert.assertTrue(dashboardPageService.isSuccessMessageDisplayed(), "Rating hasn't been updated");
     }
 }

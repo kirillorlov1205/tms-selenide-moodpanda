@@ -35,8 +35,8 @@ public class LoginPageTest extends BaseTest {
         loginPageService
                 .openLoginPage()
                 .login(userWithWrongEmail);
-        Assert.assertTrue(loginPageService.isIncorrectCredentialsValidationMessageDisplayed(), "Password" +
-                " hasn't been validated");
+        Assert.assertTrue(loginPageService.isIncorrectCredentialsValidationMessageDisplayed(), "Wrong " +
+                "credentials validation message hasn't been shown");
     }
 
     @Test(description = "Verify validation while log in with wrong password", priority = 3)
@@ -45,7 +45,7 @@ public class LoginPageTest extends BaseTest {
         loginPageService
                 .openLoginPage()
                 .login(userWithWrongPassword);
-        Assert.assertTrue(loginPageService.isIncorrectCredentialsValidationMessageDisplayed(), "Password" +
-                " hasn't been validated");
+        Assert.assertTrue(loginPageService.isIncorrectCredentialsValidationMessageDisplayed(), "Wrong " +
+                "credentials validation message hasn't been shown");
     }
 }
